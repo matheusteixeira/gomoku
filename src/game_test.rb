@@ -24,9 +24,6 @@ puts "PC pieces: #{board.pc_color} | Human pieces: #{board.human_color}"
 
 puts "New round: \n"
 
-# TODO: Replace count by end of game. Declare winner
-count = 0
-
 first_end_game = board.end_game?(board.starting_player, judge_calculator)
 second_end_game = board.end_game?(board.second_player, judge_calculator)
 
@@ -60,7 +57,6 @@ while(!(first_end_game && second_end_game))
   end
 
   puts "#{board.print_board}"
-  count += 1
   players = players.reverse
 
   first_end_game = board.end_game?(board.starting_player, judge_calculator)
