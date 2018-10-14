@@ -14,8 +14,8 @@ class MinimaxService
           best_play = child.move
         end
 
-        if alpha >= beta # poda beta
-         break #return [alpha, best_play]
+        if alpha >= beta
+         break
         end
         return [alpha, best_play]
       end
@@ -27,8 +27,8 @@ class MinimaxService
           best_play = child.move
         end
 
-        if alpha >= beta # poda alpha
-          break #return [beta, best_play]
+        if alpha >= beta
+          break
         end
         return [beta, best_play]
       end

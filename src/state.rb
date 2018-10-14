@@ -22,7 +22,6 @@ class State
     end
   end
 
-  # Utility
   def state_value
     if current_player.name == 'pc' && current_player.color == 'black'
       calculator.count_black - calculator.count_white
@@ -49,9 +48,6 @@ class State
 
   private
 
-  # The children states that will be played
-  # Definied using the free spaces limited by a boundary of 4 positions
-  # Optimization to avoid playing in irrelevant positions.
   def children
     return [[7,7]] if board.board[opponent_color].empty?
     boundaries = []
